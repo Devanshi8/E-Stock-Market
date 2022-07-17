@@ -20,6 +20,7 @@ namespace StockMarket.Models
         public virtual DbSet<TblCompany> TblCompanies { get; set; }
         public virtual DbSet<TblCustomer> TblCustomers { get; set; }
         public virtual DbSet<TblLogin> TblLogins { get; set; }
+        public virtual DbSet<TblStock> TblStocks { get; set; }
         public virtual DbSet<TblUser> TblUsers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -92,6 +93,23 @@ namespace StockMarket.Models
                 entity.Property(e => e.Password).HasMaxLength(50);
 
                 entity.Property(e => e.UserName).HasMaxLength(50);
+
+                entity.Property(e => e.UserType).HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<TblStock>(entity =>
+            {
+                entity.ToTable("TblStock");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.CompanyCode).HasMaxLength(100);
+
+                entity.Property(e => e.CompanyName).HasMaxLength(100);
+
+                entity.Property(e => e.EndDate).HasColumnType("date");
+
+                entity.Property(e => e.StartDate).HasColumnType("date");
             });
 
             modelBuilder.Entity<TblUser>(entity =>
