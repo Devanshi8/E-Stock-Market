@@ -7,7 +7,7 @@ import { AuthService } from './services/auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Flight_Booking';
+  title = 'E-StockMarket';
   constructor(private _auth: AuthService){}
   LoggedIn(input: boolean) {
     if (input) {
