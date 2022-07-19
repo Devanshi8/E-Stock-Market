@@ -14,6 +14,7 @@ import { CompanyComponent } from './company/company.component';
 import { StockComponent } from './stock/stock.component';
 import { GetallComponent } from './getall/getall.component';
 import { GetComponent } from './get/get.component';
+import { BuyComponent } from './buy/buy.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { GetComponent } from './get/get.component';
     StockComponent,
     GetallComponent,
     GetComponent,
+    BuyComponent,
   ],
   imports: [
     BrowserModule,

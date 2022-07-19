@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,7 @@ import { Router } from '@angular/router';
 export class CompanydService {
   private _shareUrl = "https://localhost:44386/api/Company/getall";
   constructor(private http: HttpClient, private _router: Router) { }
+  public search = new BehaviorSubject<string>("");
 
 
   getCompanuys() {

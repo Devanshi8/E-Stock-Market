@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from './services/auth.service';
+import { CompanydService } from './services/companyd.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   title = 'E-StockMarket';
-  constructor(private _auth: AuthService){}
+  constructor(private _auth: AuthService,private _companyservice:CompanydService){}
   LoggedIn(input: boolean) {
     if (input) {
       return this._auth.loggedIn();
@@ -20,5 +21,6 @@ export class AppComponent {
   LogOut() {
     this._auth.logoutUser();
   }
+  
   
 }

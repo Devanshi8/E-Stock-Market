@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BuyComponent } from './buy/buy.component';
 import { CompanyComponent } from './company/company.component';
 import { GetComponent } from './get/get.component';
 import { GetallComponent } from './getall/getall.component';
@@ -45,6 +46,10 @@ const routes: Routes = [
   {
     path: 'getall',
     component: GetallComponent
+  },
+  {
+    path: 'buy',
+    component: BuyComponent
   },
   
 ];
