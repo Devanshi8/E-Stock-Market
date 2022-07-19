@@ -27,7 +27,7 @@ export class BuyService {
   getTotalPrice(): number {
     let grandTotal = 0;
     this.stockItemList.map((a: any) => {
-      grandTotal += a.productFinal;
+      grandTotal += a.stockPrice;
     })
     return grandTotal;
   }
