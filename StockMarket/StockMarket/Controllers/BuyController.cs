@@ -10,27 +10,26 @@ namespace StockMarket.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CustomerController : ControllerBase
+    public class BuyController : ControllerBase
     {
         EStockMarketDBContext db;
-        public CustomerController(EStockMarketDBContext _db)
+        public BuyController(EStockMarketDBContext _db)
         {
             db = _db;
         }
         [HttpGet]
         //user can get the details of stock start end date
-        public IEnumerable<TblCustomer> GetCustomers()
+        public IEnumerable<TblUser> GetUsers()
         {
-            return db.TblCustomers;
+            return db.TblUsers;
         }
         [HttpPost]
         //company can add the stock
-        public string Post([FromBody] TblCustomer tblCustomer)
+        public string Post([FromBody] TblUser tblUser)
         {
-            db.TblCustomers.Add(tblCustomer);
+            db.TblUsers.Add(tblUser);
             db.SaveChanges();
             return "success";
         }
-        
     }
 }

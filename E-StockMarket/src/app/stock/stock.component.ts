@@ -38,7 +38,7 @@ export class StockComponent implements OnInit {
   PostError(res:any){
     console.log(res);
   }
-
+  
 
   getData(){
     console.log("Hi");

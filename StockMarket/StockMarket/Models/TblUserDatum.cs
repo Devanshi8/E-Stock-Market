@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace StockMarket.Models
 {
-    public partial class TblUser
+    public partial class TblUserDatum
     {
         public int Id { get; set; }
         public string CompanyName { get; set; }

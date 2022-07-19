@@ -112,15 +112,7 @@ namespace StockMarket.Models
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
-                entity.Property(e => e.CompanyName).HasMaxLength(100);
-
-                entity.Property(e => e.DateandTime).HasColumnType("datetime");
-
-                entity.Property(e => e.FirstName).HasMaxLength(50);
-
-                entity.Property(e => e.LastName).HasMaxLength(50);
-
-                entity.Property(e => e.UserMailid).HasMaxLength(200);
+                entity.Property(e => e.CompanyName).HasMaxLength(10);
             });
 
             OnModelCreatingPartial(modelBuilder);
