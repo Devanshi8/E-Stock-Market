@@ -12,6 +12,8 @@ import { AuthService } from './services/auth.service';
 import { MyprofileComponent } from './myprofile/myprofile.component';
 import { CompanyComponent } from './company/company.component';
 import { StockComponent } from './stock/stock.component';
+import { GetallComponent } from './getall/getall.component';
+import { GetComponent } from './get/get.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { StockComponent } from './stock/stock.component';
     MyprofileComponent,
     CompanyComponent,
     StockComponent,
+    GetallComponent,
+    GetComponent,
   ],
   imports: [
     BrowserModule,

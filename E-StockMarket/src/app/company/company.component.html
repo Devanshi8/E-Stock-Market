@@ -3,33 +3,43 @@
 <br>
 <div class="container-fluid">
 <form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="formGroupExampleInput9">Company Email</label>
+      <input [(ngModel)]="CompanyD.companyEmail" type="email" class="form-control" name="cmpmail" placeholder="Company E-mail">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="formGroupExampleInput8">Company CEO</label>
+        <input type="text" class="form-control" name="cceo" placeholder="Company CEO" [(ngModel)]="CompanyD.companyCeo">
+    </div>
+  </div><div class="form-group col-md-2"></div>
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="formGroupExampleInput">Company Name</label>
-        <input type="text" class="form-control" id="cmpname" placeholder="Company Name">
+        <label for="formGroupExampleInput7">Company Name</label>
+        <input [(ngModel)]="CompanyD.companyName" type="text" class="form-control" name="cmpname" placeholder="Company Name">
       </div>
       <div class="form-group col-md-6">
         <label for="formGroupExampleInput2">Password</label>
-        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+        <input type="password" class="form-control" name="inputPassword4" placeholder="Password" [(ngModel)]="CompanyD.companyPassword">
       </div>
     </div><div class="form-group col-md-2"></div>
     <div class="form-row">
     <div class="form-group col-md-6">
-        <label for="formGroupExampleInput3">Company CEO</label>
-        <input type="text" class="form-control" id="cceo" placeholder="Company CEO">
+        <label for="formGroupExampleInput3">Company Code</label>
+        <input type="text" class="form-control" name="ccode" placeholder="Company Code" [(ngModel)]="CompanyD.companyCode">
     </div>
     <div class="form-group col-md-6">
         <label for="formGroupExampleInput4">Company TurnOver</label>
-        <input type="text" class="form-control" id="cmptr" placeholder="> 10Cr">
+        <input type="text" class="form-control" name="cmptr" placeholder="> 10Cr" [(ngModel)]="CompanyD.companyTurnover">
       </div></div><div class="form-group col-md-2"></div>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="formGroupExampleInput5">Company Website</label>
-        <input type="text" class="form-control" id="cweb" placeholder="Company URL">
+        <input type="text" class="form-control" name="cweb" placeholder="Company URL" [(ngModel)]="CompanyD.companyWebsite">
       </div>
       <div class="form-group col-md-6">
         <label for="formGroupExampleInput6">Stock Exchange</label>
-        <input type="text" class="form-control" id="stex" placeholder="BSE, NSE etc..">
+        <input type="text" class="form-control" name="stex" placeholder="BSE, NSE etc.." [(ngModel)]="CompanyD.stockExchange">
       </div>
       <div class="form-group col-md-2">
        
@@ -44,6 +54,10 @@
       </div>
     </div>
     <div class="form-group col-md-2"></div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
-  </form>
+    <button type="submit" class="btn btn-primary" (click)="AddCompany()" routerLink="/stock">Submit</button>
+   </form>
 </div><div class="form-group col-md-2"></div> <br>
+<ul class="pager">
+  <label style="color: red;">Already Submitted</label>
+  <li><a  routerLink="/stock">Skip</a></li>
+</ul>

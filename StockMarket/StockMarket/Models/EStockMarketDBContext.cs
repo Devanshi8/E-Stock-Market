@@ -48,11 +48,11 @@ namespace StockMarket.Models
 
                 entity.Property(e => e.CompanyCode).HasMaxLength(50);
 
-                entity.Property(e => e.CompanyLogo)
-                    .HasMaxLength(10)
-                    .IsFixedLength(true);
+                entity.Property(e => e.CompanyEmail).HasMaxLength(200);
 
                 entity.Property(e => e.CompanyName).HasMaxLength(200);
+
+                entity.Property(e => e.CompanyPassword).HasMaxLength(50);
 
                 entity.Property(e => e.CompanyWebsite).HasMaxLength(200);
 
@@ -61,19 +61,15 @@ namespace StockMarket.Models
 
             modelBuilder.Entity<TblCustomer>(entity =>
             {
-                entity.HasNoKey();
-
                 entity.ToTable("TblCustomer");
+
+                entity.Property(e => e.Id).HasColumnName("ID");
 
                 entity.Property(e => e.AccountDemat)
                     .HasMaxLength(50)
                     .HasColumnName("AccountDEMAT");
 
                 entity.Property(e => e.FirstName).HasMaxLength(50);
-
-                entity.Property(e => e.Id)
-                    .ValueGeneratedOnAdd()
-                    .HasColumnName("ID");
 
                 entity.Property(e => e.LastName).HasMaxLength(50);
 
@@ -101,7 +97,7 @@ namespace StockMarket.Models
             {
                 entity.ToTable("TblStock");
 
-                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.Id).HasColumnName("ID");
 
                 entity.Property(e => e.CompanyCode).HasMaxLength(100);
 

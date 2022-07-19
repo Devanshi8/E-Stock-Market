@@ -6,30 +6,30 @@
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="formGroupExampleInput">First Name</label>
-        <input type="text" class="form-control" id="firstname" placeholder="First Name">
+        <input [(ngModel)]="customer.firstName" type="text" class="form-control" name="firstname" placeholder="First Name">
       </div>
       <div class="form-group col-md-6">
         <label for="formGroupExampleInput2">Last Name</label>
-        <input type="password" class="form-control" id="lastname" placeholder="Last Name">
+        <input [(ngModel)]="customer.lastName" type="text" class="form-control" name="lastname" placeholder="Last Name">
       </div>
     </div><div class="form-group col-md-2"></div>
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="inputEmail4">User Mailid</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+            <label for="inputEmail4">User Mail id</label>
+            <input [(ngModel)]="customer.userMailid" type="email" class="form-control" name="inputEmail4" placeholder="Email">
           </div>
     <div class="form-group col-md-6">
         <label for="formGroupExampleInput3">Password</label>
-        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+        <input [(ngModel)]="customer.password" type="password" class="form-control" name="pwd" id="inputPassword4" placeholder="Password">
       </div></div><div class="form-group col-md-2"></div>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="formGroupExampleInput4">Phone Number</label>
-        <input type="number" class="form-control" id="phnum" placeholder="Phone Number">
+        <input [(ngModel)]="customer.phoneNo" type="number" class="form-control" name="phnum" placeholder="Phone Number">
       </div>
       <div class="form-group col-md-6">
         <label for="formGroupExampleInput6">DEMAT Account Number</label>
-        <input type="text" class="form-control" id="demataccnum" placeholder="DEMAT Account Number">
+        <input [(ngModel)]="customer.accountDemat" type="text" class="form-control" name="demataccnum" placeholder="DEMAT Account Number">
       </div>
       <div class="form-group col-md-2">
        
@@ -44,6 +44,10 @@
       </div>
     </div>
     <div class="form-group col-md-2"></div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary" (click)="AddCustomer()" routerLink="/get">Submit</button>
   </form>
 </div><div class="form-group col-md-2"></div> <br>
+<ul class="pager">
+  <label style="color: red;">Already Submitted</label>
+  <li><a  routerLink="/get">Skip</a></li>
+</ul>
