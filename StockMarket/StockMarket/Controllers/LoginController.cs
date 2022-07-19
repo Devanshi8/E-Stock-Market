@@ -37,6 +37,7 @@ namespace StockMarket.Controllers
         public IActionResult Register(RegisterViewModel registerViewModel)
         {
             LoginViewModel login = new LoginViewModel();
+            //login.UserType = registerViewModel.UserType;
             login.UserName = registerViewModel.UserName;
             login.Password = registerViewModel.Password;
             var token = iJWTManagerRepository.Authenicate(login, true);

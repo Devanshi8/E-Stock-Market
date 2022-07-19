@@ -18,6 +18,8 @@ namespace StockMarket.Controllers
             db = _db;
         }
         [HttpGet]
+
+        [Route("getall")]
         public IEnumerable<TblCompany> GetCompanies()
         {
             return db.TblCompanies;

@@ -8,4 +8,5 @@ export class CompanyDetails{
     companyTurnover:number=0;
     companyWebsite:string='';
     stockExchange:string='';
+    stockQuantity:number=0;
 }

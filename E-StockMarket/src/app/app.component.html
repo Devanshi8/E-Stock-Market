@@ -17,13 +17,13 @@
         <a class="nav-link" *ngIf="LoggedIn(false)" routerLink="/register">Register</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" *ngIf="LoggedIn(false)" routerLink="/stock">Stock</a>
+        <a class="nav-link" *ngIf="LoggedIn(false)" routerLink="/get">Stock</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" *ngIf="LoggedIn(false)" routerLink="/company">Company</a>
+        <a class="nav-link" *ngIf="LoggedIn(false)" routerLink="/getall">Company</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" *ngIf="LoggedIn(true)" routerLink="/myprofile">My Profile</a>
+        <a class="nav-link disabled" *ngIf="LoggedIn(false)" routerLink="/myprofile">My Profile</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" *ngIf="LoggedIn(true)" (click)="LogOut()" style="color:red"><i class="fa fa-power-off" style="font-size:24px; color:red"></i></a>

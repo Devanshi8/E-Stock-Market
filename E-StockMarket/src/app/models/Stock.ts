@@ -4,4 +4,6 @@ export class Stock{
     companyName:string='';
     startDate:string='';
     endDate:string='';
+    stockPrice:number=0;
+    stockQuantity:number=0;
 }

@@ -13,8 +13,7 @@ export class StockComponent implements OnInit {
   constructor(public httpc:HttpClient) { }
   StockDetail: Stock = new Stock();
   StockDetails: Array<Stock> = new Array<Stock>();
-  companydetail: CompanyDetails =new CompanyDetails();
-companydetails:Array<CompanyDetails>=new Array<CompanyDetails>();
+  
 
   ngOnInit(): void {
   }
@@ -22,10 +21,12 @@ companydetails:Array<CompanyDetails>=new Array<CompanyDetails>();
   {
     console.log(this.StockDetail);
     var stockdto={
-      companyCode:this.companydetail.companyCode,
-      companyName:this.companydetail.companyName,
+      companyCode:this.StockDetail.companyCode,
+      companyName:this.StockDetail.companyName,
       startDate:this.StockDetail.startDate, 
-      endDate:this.StockDetail.endDate,               
+      endDate:this.StockDetail.endDate,     
+      stockPrice:this.StockDetail.stockPrice,
+      stockQuantity:this.StockDetail.stockQuantity,          
     }
   
       this.httpc.post("https://localhost:44386/api/Stock",stockdto).subscribe(res=>this.PostSuccess(res),res=>this.PostError(res));

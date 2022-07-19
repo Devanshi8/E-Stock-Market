@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CompanyComponent } from './company/company.component';
 import { GetComponent } from './get/get.component';
+import { GetallComponent } from './getall/getall.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MyprofileComponent } from './myprofile/myprofile.component';
@@ -40,6 +41,10 @@ const routes: Routes = [
   {
     path: 'get',
     component: GetComponent
+  },
+  {
+    path: 'getall',
+    component: GetallComponent
   },
   
 ];

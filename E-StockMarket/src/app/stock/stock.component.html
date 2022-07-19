@@ -7,11 +7,11 @@
         <table align="center">
             <tr>
               <td>Company Code :</td>
-              <td><input [(ngModel)]="companydetail.companyCode" type="text"></td>
+              <td><input [(ngModel)]="StockDetail.companyCode" type="text"></td>
             </tr>
             <tr>
               <td>Company Name :</td>
-              <td><input [(ngModel)]="companydetail.companyName" type="text"></td>
+              <td><input [(ngModel)]="StockDetail.companyName" type="text"></td>
             </tr>
             <tr>
               <td>Start Date :</td>
@@ -20,7 +20,14 @@
             <tr>
                 <td>End Date :</td>
                 <td><input  type="date" [(ngModel)]="StockDetail.endDate"></td>
-               
+            </tr>
+            <tr>
+                <td>Stock Price :</td>
+                <td><input [(ngModel)]="StockDetail.stockPrice" type="number"></td>
+            </tr>
+            <tr>
+                <td>Stock Quantity :</td>
+                <td><input [(ngModel)]="StockDetail.stockQuantity" type="text"></td>
               </tr>
             <tr><td></td><td><button align="center" type="button" class="btn btn-secondary" (click)="AddStock()">Add</button><br><br></td></tr>
         </table> 

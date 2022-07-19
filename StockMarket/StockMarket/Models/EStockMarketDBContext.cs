@@ -89,8 +89,6 @@ namespace StockMarket.Models
                 entity.Property(e => e.Password).HasMaxLength(50);
 
                 entity.Property(e => e.UserName).HasMaxLength(50);
-
-                entity.Property(e => e.UserType).HasMaxLength(50);
             });
 
             modelBuilder.Entity<TblStock>(entity =>

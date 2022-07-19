@@ -12,5 +12,7 @@ namespace StockMarket.Models
         public string CompanyName { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
+        public double? StockPrice { get; set; }
+        public int? StockQuantity { get; set; }
     }
 }

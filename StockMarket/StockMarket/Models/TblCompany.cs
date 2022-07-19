@@ -16,5 +16,6 @@ namespace StockMarket.Models
         public string StockExchange { get; set; }
         public string CompanyPassword { get; set; }
         public string CompanyEmail { get; set; }
+        public int? StockQuantity { get; set; }
     }
 }

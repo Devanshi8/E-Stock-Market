@@ -9,6 +9,6 @@ namespace StockMarket.View_Models
     {
         public string Token { get; set; }
         public string RefreshToken { get; set; }
-        public bool IsAdmin { get; set; }
+        public bool isAdmin { get; set; }
     }
 }
