@@ -18,13 +18,13 @@ namespace StockMarket.Controllers
             db = _db;
         }
         [HttpGet]
-        //user can get the details of stock start end date
+       
         public IEnumerable<TblUser> GetUsers()
         {
             return db.TblUsers;
         }
         [HttpPost]
-        //company can add the stock
+        
         public string Post([FromBody] TblUser tblUser)
         {
             db.TblUsers.Add(tblUser);

@@ -27,5 +27,12 @@ export class HomeComponent implements OnInit {
   GetError(input:any){
     console.log(input);
   }
-  
+  uploadFile=(files:any)=>{
+    console.log("Hi");
+    
+    if(files.length==0){
+      return;
+    }
+   
+  }
 }
