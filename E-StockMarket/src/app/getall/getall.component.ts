@@ -22,5 +22,15 @@ export class GetallComponent implements OnInit {
     this._stockservice.getStocks().subscribe(res => this.StockDetails = res, err => console.log(err))
    
   }
-
+  getCompany(){
+    console.log("Hi");
+    this.httpc.get("https://localhost:44386/api/Company/getall").subscribe(res=>this.GetSuccess(res),res=>this.GetError(res));
+  }
+  
+  GetSuccess(input:any){
+    this.StockDetails=input;
+  }
+  GetError(input:any){
+    console.log(input);
+  }
 }

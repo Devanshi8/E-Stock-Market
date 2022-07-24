@@ -7,11 +7,15 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class BuyService {
+
+  // public search = new BehaviorSubject<string>("");
+
+
+
   private shareUrl = "https://localhost:44386/api/Stock/get";
   public stockItemList: any = []
   public shareList = new BehaviorSubject<any>([]);
-  public search = new BehaviorSubject<string>("");
-
+  
   constructor(private http: HttpClient, private _router: Router) { }
   additem(item: any) {
     return this.http.post<any>(this.shareUrl, item);

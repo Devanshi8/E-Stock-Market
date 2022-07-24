@@ -1,9 +1,9 @@
-<br>
-<div class="conatiner-fluid">
+<br><div class="conatiner-fluid">
     <div class="container">
-        <h2 class="animate__heartBeat" align="center">All Company Details</h2>
+      
+       <h1 class="animate__heartBeat" align="center">Company Details</h1>
+        
     </div>
-</div>
 <br><br><br>
 <div class="container-fluid">
     <div class="container">
@@ -29,7 +29,7 @@
                     <td> {{item.companyName}} </td>
                     <td> {{item.companyCeo}} </td>
                     <td> {{item.companyTurnover}} </td>
-                    <td> {{item.companyWebsite}} </td>
+                    <td><a href="{{item.companyWebsite}}" target="_blank">{{item.companyWebsite}}</a>  </td>
                     <td> {{item.stockExchange}} </td>
                     <td>{{item.stockQuantity}}</td>
                    
@@ -39,3 +39,4 @@
         </table>
     </div>
 </div><br><br><br>
+  

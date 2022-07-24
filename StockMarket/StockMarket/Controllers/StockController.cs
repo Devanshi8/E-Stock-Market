@@ -32,5 +32,34 @@ namespace StockMarket.Controllers
             db.SaveChanges();
             return "success";
         }
+        //Shares update
+        [HttpPut]
+        public string Put([FromBody] TblStock tblStock)
+        {
+            var tblSampleObj = db.TblStocks.Where(x => x.Id == tblStock.Id);
+            if (tblSampleObj != null)
+            {
+                db.TblStocks.Update(tblStock);
+                db.SaveChanges();
+                return "Success";
+            }
+            return "Fail";
+        }
+        [HttpDelete]
+        public string Delete([FromBody] int Id)
+        {
+            var tblSampleObj = db.TblStocks.Where(x => x.Id == Id).FirstOrDefault();
+            if (tblSampleObj != null)
+            {
+                db.TblStocks.Remove(tblSampleObj);
+                db.SaveChanges();
+                if(tblSampleObj==null)
+                {
+                   //also remove company if stocks are removed
+                }
+                return "Success";
+            }
+            return "Fail";
+        }
     }
 }

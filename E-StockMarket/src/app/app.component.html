@@ -17,23 +17,26 @@
         <a class="nav-link" *ngIf="LoggedIn(false)" routerLink="/register">Register</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" *ngIf="LoggedIn(true)" routerLink="/get">Stock</a>
+        <a class="nav-link" *ngIf="LoggedIn(false)" routerLink="/get">Stock</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="LoggedIn(true)" routerLink="/stock">AddShare</a>
       </li>
       <li class="nav-item">
         <a class="nav-link"  routerLink="/getall">Company</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" *ngIf="LoggedIn(false)" routerLink="/myprofile">My Profile</a>
+        <a class="nav-link" *ngIf="LoggedIn(false)" routerLink="/info">Search</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" *ngIf="LoggedIn(true)" (click)="LogOut()" style="color:red"><i class="fa fa-power-off" style="font-size:24px; color:red"></i></a>
       </li>
     </ul>
   </div>
-  <form class="form-inline">
+  <!-- <form class="form-inline">
     <input class="form-control mr-sm-2"  type="search" placeholder="Company Code" aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search" style="font-size:24px;color:whitesmoke"></i></button>
-  </form>
+  </form> -->
 </nav>
 </div>
 

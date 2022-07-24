@@ -84,8 +84,6 @@ namespace StockMarket.Models
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
-                entity.Property(e => e.IsAdmin).HasColumnName("isAdmin");
-
                 entity.Property(e => e.Password).HasMaxLength(50);
 
                 entity.Property(e => e.UserName).HasMaxLength(50);

@@ -14,6 +14,16 @@
                 <td></td><td></td><td></td>
                 <td><button type="button" class="btn btn-outline-danger">Min</button></td>
             </tr>
+            <div class="col-12">
+                <div class="form-check"></div>
+            </div>
+            <tr style="text-align: center;">
+                <td bgcolor="#D3D3D3">{{max}}</td>
+                <td></td><td></td><td></td>
+                <td bgcolor="#D3D3D3">{{average}}</td>
+                <td></td><td></td><td></td>
+                <td bgcolor="#D3D3D3">{{min}} </td>
+            </tr>
         </table>
     </div>
 </div><br><br>
@@ -30,7 +40,7 @@
                     <th scope="col">Closing Date</th>
                     <th scope="col">Stock Price</th>
                     <th scope="col">Stock Quantity</th>
-                    <th scope="col">Buy</th>
+                    <!-- <th scope="col">Buy</th> -->
 
                 </tr>
             </thead>
@@ -43,7 +53,7 @@
                     <td > {{item.endDate}} </td>
                     <td>{{item.stockPrice}} Rs.</td>
                     <td>{{item.stockQuantity}}</td>
-                    <td><button type="button" class="btn btn-secondary" (click)="AddShare(item)" routerLink="/buy">Buy</button></td>
+                    <!-- <td><button type="button" class="btn btn-secondary" (click)="AddShare(item)" routerLink="/buy">Buy</button></td> -->
                 </tr>
                
             </tbody>

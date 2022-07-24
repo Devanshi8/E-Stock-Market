@@ -24,6 +24,7 @@ export class BuyComponent implements OnInit {
       this.grandTotal = this.buyService.getTotalPrice();
     })
   }
+  
   AddShare() {
     console.log(this.Buyer);
     var item = {

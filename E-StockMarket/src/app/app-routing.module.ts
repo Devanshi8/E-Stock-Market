@@ -5,8 +5,9 @@ import { CompanyComponent } from './company/company.component';
 import { GetComponent } from './get/get.component';
 import { GetallComponent } from './getall/getall.component';
 import { HomeComponent } from './home/home.component';
+import { InfoComponent } from './info/info.component';
 import { LoginComponent } from './login/login.component';
-import { MyprofileComponent } from './myprofile/myprofile.component';
+
 import { RegisterComponent } from './register/register.component';
 import { StockComponent } from './stock/stock.component';
 
@@ -35,10 +36,7 @@ const routes: Routes = [
     path: 'stock',
     component: StockComponent
   },
-  {
-    path: 'myprofile',
-    component: MyprofileComponent
-  },
+  
   {
     path: 'get',
     component: GetComponent
@@ -50,6 +48,10 @@ const routes: Routes = [
   {
     path: 'buy',
     component: BuyComponent
+  },
+  {
+    path: 'info',
+    component: InfoComponent
   },
   
 ];
